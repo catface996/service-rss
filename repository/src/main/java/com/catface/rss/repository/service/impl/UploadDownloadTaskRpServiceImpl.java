@@ -66,7 +66,7 @@ public class UploadDownloadTaskRpServiceImpl extends ServiceImpl<UploadDownloadT
         if (task.getStatus() == UpDownTaskStatusEnum.INIT) {
             UploadDownloadTask taskForUpdate = new UploadDownloadTask();
             taskForUpdate.setId(taskId);
-            taskForUpdate.setGmtModified(new Date());
+            taskForUpdate.setUpdated(new Date());
             taskForUpdate.setStatus(UpDownTaskStatusEnum.READY);
             updateById(taskForUpdate);
         }

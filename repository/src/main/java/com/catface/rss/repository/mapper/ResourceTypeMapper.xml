@@ -4,7 +4,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, type_name, type_code, belong_to_biz_domain, up_down, bucket_name, access_type, public_access_domain, private_access_domain, upload_term, need_callback, path_pattern, gmt_create, gmt_modified, status, default_access_status, remark
+        id, type_name, type_code, belong_to_biz_domain, up_down, bucket_name, access_type, public_access_domain, private_access_domain, upload_term, need_callback, path_pattern, created, updated, status, default_access_status, remark
     </sql>
 
     <select id="selectByCode" resultType="com.catface.rss.repository.entity.ResourceType">

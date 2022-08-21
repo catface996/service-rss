@@ -69,10 +69,10 @@ public class ResourceType implements Serializable {
     private String pathPattern;
 
     @ApiModelProperty(value = "创建时间")
-    private Date gmtCreate;
+    private Date created;
 
     @ApiModelProperty(value = "修改时间")
-    private Date gmtModified;
+    private Date updated;
 
     @ApiModelProperty(value = "状态,1:有效,0:无效")
     private CommonStatusEnum status;

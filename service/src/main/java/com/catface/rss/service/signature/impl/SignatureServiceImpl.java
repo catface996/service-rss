@@ -130,7 +130,7 @@ public class SignatureServiceImpl implements SignatureService {
      * @param resourcePath 资源路径
      * @return 生成后的资源记录
      */
-    private Resource generateResource(ResourceType resourceType, String resourceName, String operator,
+    private Resource generateResource(ResourceType resourceType, String resourceName, Long operator,
                                       String resourcePath) {
         Date currentDate = new Date();
         Resource resource = new Resource();
@@ -140,8 +140,8 @@ public class SignatureServiceImpl implements SignatureService {
         resource.setResourcePath(resourcePath);
         resource.setResourceTypeId(resourceType.getId());
         resource.setBucketName(resourceType.getBucketName());
-        resource.setGmtCreate(currentDate);
-        resource.setGmtModified(currentDate);
+        resource.setCreated(currentDate);
+        resource.setUpdated(currentDate);
         resource.setStatus(ResourceStatusEnum.INIT);
         resource.setAccessStatus(resourceType.getDefaultAccessStatus());
         resourceRpService.save(resource);
@@ -161,8 +161,8 @@ public class SignatureServiceImpl implements SignatureService {
         UploadDownloadTask uploadDownloadTask = new UploadDownloadTask();
         uploadDownloadTask.setCreator(resource.getCreator());
         uploadDownloadTask.setModifier(resource.getModifier());
-        uploadDownloadTask.setGmtCreate(resource.getGmtCreate());
-        uploadDownloadTask.setGmtModified(resource.getGmtModified());
+        uploadDownloadTask.setCreated(resource.getCreated());
+        uploadDownloadTask.setUpdated(resource.getUpdated());
         uploadDownloadTask.setResourceId(resource.getId());
         uploadDownloadTask.setStatus(UpDownTaskStatusEnum.INIT);
         uploadDownloadTask.setTaskDesc(taskDesc);

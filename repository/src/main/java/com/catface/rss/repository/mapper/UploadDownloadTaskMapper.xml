@@ -4,7 +4,7 @@
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, resource_id, task_type, upload_or_download, task_desc, status, error_resource_id, gmt_create, gmt_modified, creator, modifier, remark
+        id, resource_id, task_type, upload_or_download, task_desc, status, error_resource_id, created, updated, creator, modifier, remark
     </sql>
 
     <select id="selectByResourceId" resultType="com.catface.rss.repository.entity.UploadDownloadTask">

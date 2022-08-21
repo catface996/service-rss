@@ -50,16 +50,16 @@ public class UploadDownloadTask implements Serializable {
     private Long errorResourceId;
 
     @ApiModelProperty(value = "创建时间")
-    private Date gmtCreate;
+    private Date created;
 
     @ApiModelProperty(value = "修改时间")
-    private Date gmtModified;
+    private Date updated;
 
     @ApiModelProperty(value = "创建人")
-    private String creator;
+    private Long creator;
 
     @ApiModelProperty(value = "修改人")
-    private String modifier;
+    private Long modifier;
 
     @ApiModelProperty(value = "备注")
     private String remark;

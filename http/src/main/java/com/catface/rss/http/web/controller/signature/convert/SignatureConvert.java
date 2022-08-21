@@ -24,7 +24,7 @@ public class SignatureConvert {
     public static GetSignatureParam convert(GetSignatureRequest request) {
         GetSignatureParam param = new GetSignatureParam();
         GET_SIGNATURE_REQUEST_2_PARAM.copy(request, param, null);
-        param.setCreator(request.getCtxOperatorId());
+        param.setCreator(request.getCtxUserId());
         return param;
     }
 

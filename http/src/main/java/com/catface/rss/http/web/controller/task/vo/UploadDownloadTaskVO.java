@@ -38,10 +38,10 @@ public class UploadDownloadTaskVO {
     private Long errorResourceId;
 
     @ApiModelProperty(value = "创建时间")
-    private Date gmtCreate;
+    private Date created;
 
     @ApiModelProperty(value = "修改时间")
-    private Date gmtModified;
+    private Date updated;
 
     @ApiModelProperty(value = "创建人")
     private String creator;

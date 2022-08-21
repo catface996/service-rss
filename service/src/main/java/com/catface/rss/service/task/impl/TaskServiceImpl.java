@@ -64,7 +64,7 @@ public class TaskServiceImpl implements TaskService {
         UploadDownloadTask taskForUpdate = new UploadDownloadTask();
         taskForUpdate.setId(taskId);
         taskForUpdate.setErrorResourceId(errorResourceId);
-        taskForUpdate.setGmtModified(new Date());
+        taskForUpdate.setUpdated(new Date());
 
         uploadDownloadTaskRpService.updateById(taskForUpdate);
     }
@@ -83,7 +83,7 @@ public class TaskServiceImpl implements TaskService {
         UploadDownloadTask taskForUpdate = new UploadDownloadTask();
         taskForUpdate.setId(task.getId());
         taskForUpdate.setErrorResourceId(errorResourceId);
-        taskForUpdate.setGmtModified(new Date());
+        taskForUpdate.setUpdated(new Date());
 
         uploadDownloadTaskRpService.updateById(taskForUpdate);
     }
@@ -119,7 +119,7 @@ public class TaskServiceImpl implements TaskService {
         UploadDownloadTask taskForUpdate = new UploadDownloadTask();
         taskForUpdate.setId(task.getId());
         taskForUpdate.setStatus(status);
-        taskForUpdate.setGmtModified(new Date());
+        taskForUpdate.setUpdated(new Date());
         uploadDownloadTaskRpService.updateById(taskForUpdate);
     }
 

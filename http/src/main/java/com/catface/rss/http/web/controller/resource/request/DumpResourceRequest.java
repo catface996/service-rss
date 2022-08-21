@@ -35,6 +35,6 @@ public class DumpResourceRequest {
 
     @ApiModelProperty(value = "操作人ID,网关注入,前端无需提供", required = true, example = "1212098755")
     @NotBlank(message = "操作人ID不能为空")
-    private String ctxOperatorId;
+    private Long ctxUserId;
 
 }

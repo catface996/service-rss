@@ -36,13 +36,13 @@ public class ResourceRpServiceImpl extends ServiceImpl<ResourceMapper, Resource>
         if (resource.getStatus() == ResourceStatusEnum.INIT) {
             Resource resourceForUpdate = new Resource();
             resourceForUpdate.setId(resourceId);
-            resourceForUpdate.setGmtModified(new Date());
+            resourceForUpdate.setUpdated(new Date());
             resourceForUpdate.setStatus(status);
             resourceForUpdate.setSize(size);
             updateById(resourceForUpdate);
         }
 
-        resource.setGmtModified(new Date());
+        resource.setUpdated(new Date());
         resource.setStatus(status);
         resource.setSize(size);
         return resource;

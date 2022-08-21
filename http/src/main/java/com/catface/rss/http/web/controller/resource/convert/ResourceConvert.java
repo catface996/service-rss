@@ -68,7 +68,7 @@ public class ResourceConvert {
     public static DumpResourceParam convert(DumpResourceRequest request) {
         DumpResourceParam param = new DumpResourceParam();
         DUMP_RESOURCE_REQUEST_2_PARAM.copy(request, param, null);
-        param.setCreator(request.getCtxOperatorId());
+        param.setCreator(request.getCtxUserId());
         return param;
     }
 

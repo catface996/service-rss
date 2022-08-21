@@ -137,12 +137,12 @@ public class ResourceServiceImpl implements ResourceService {
         resourceForUpdate.setId(param.getResourceId());
         resourceForUpdate.setAccessStatus(param.getAccessStatus());
         resourceForUpdate.setAntiFraudContent(param.getAntiFraudContent());
-        resourceForUpdate.setGmtModified(new Date());
+        resourceForUpdate.setUpdated(new Date());
         resourceForUpdate.setModifier(param.getOperator());
         resourceRpService.updateById(resourceForUpdate);
 
         // 发送资源消息
-        resource.setGmtModified(new Date());
+        resource.setUpdated(new Date());
         resource.setModifier(param.getOperator());
         resource.setAntiFraudContent(param.getAntiFraudContent());
         resourcesNoticePublisher.sendResourceMessage(resource, resourceType);
@@ -176,7 +176,7 @@ public class ResourceServiceImpl implements ResourceService {
      * @return 资源ID
      */
     public Long uploadFile(String typeCode, String resourceName, String contentType, InputStream inputStream,
-                           String creator, int timeout) {
+                           Long creator, int timeout) {
         SignatureDTO signature = getSignature(typeCode, resourceName, creator);
         try {
             boolean success = ResourceUtil.uploadFile(inputStream, resourceName, contentType, signature, timeout);
@@ -197,7 +197,7 @@ public class ResourceServiceImpl implements ResourceService {
      * @param creator      创建人
      * @return 资源签名信息
      */
-    private SignatureDTO getSignature(String typeCode, String resourceName, String creator) {
+    private SignatureDTO getSignature(String typeCode, String resourceName, Long creator) {
         GetSignatureParam param = new GetSignatureParam();
         param.setTypeCode(typeCode);
         param.setResourceName(resourceName);

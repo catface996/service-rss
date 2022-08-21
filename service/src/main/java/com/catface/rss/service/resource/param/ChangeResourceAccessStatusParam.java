@@ -1,11 +1,11 @@
 package com.catface.rss.service.resource.param;
 
-import javax.validation.constraints.NotNull;
-
 import com.catface.rss.common.enums.AccessStatusEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * @author catface
@@ -28,6 +28,6 @@ public class ChangeResourceAccessStatusParam {
 
     @ApiModelProperty(value = "操作人", required = true)
     @NotNull(message = "操作人不能为空")
-    private String operator;
+    private Long operator;
 
 }
