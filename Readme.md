@@ -84,7 +84,7 @@ GeneratorServiceEntity.generateAllCode 会生dao层的相关代码
 
 ## 系统边界
 
-![系统边界](./docs/component/组件.png)
+![系统边界](./docs/component/component.png)
 
 ## 系统交互时序
 
