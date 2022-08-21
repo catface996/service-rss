@@ -80,25 +80,25 @@ GeneratorServiceEntity.generateAllCode 会生dao层的相关代码
 
 ## 用例
 
-![用例图](docs/usecase/用例图.png)
+![用例图](./docs/usecase/用例图.png)
 
 ## 系统边界
 
-![系统边界](docs/component/组件.png)
+![系统边界](./docs/component/组件.png)
 
 ## 系统交互时序
 
 ### 前端异步上环文件
 
-![](docs/sequence/前端异步上传文件.png)
+![](./docs/sequence/前端异步上传文件.png)
 
 ### 服务端上传文件(常用于导出)
 
-![](docs/sequence/服务端导出-前端下载.png)
+![](./docs/sequence/服务端导出-前端下载.png)
 
 ## 数据库模型
 
-![数据库模型](docs/entity/实体.png)
+![数据库模型](./docs/entity/实体.png)
 
 ~~~mysql
 
