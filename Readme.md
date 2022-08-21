@@ -213,3 +213,9 @@ public class SignatureVO {
 [服务端上传文件到OSS](https://help.aliyun.com/document_detail/112718.html?spm=a2c4g.11186623.6.1520.21da406cEEuFld)
 
 [服务端签名后前端上传文件到OSS](https://help.aliyun.com/document_detail/31926.html?spm=a2c4g.11186623.6.1524.b76574b8HBS551)
+
+### 代码格式化
+
+[intellij-google-java-style](https://github.com/google/styleguide)
+
+![image-20220821170259683](https://tva1.sinaimg.cn/large/e6c9d24ely1h5ehvwyzx4j21550u0q9i.jpg)
