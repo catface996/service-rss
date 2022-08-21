@@ -39,6 +39,6 @@ public class GetSignatureRequest {
 
     @ApiModelProperty(value = "操作人", required = true, example = "1299898989889898989")
     @NotNull(message = "操作人不能为空")
-    private String creator;
+    private Long creator;
 
 }

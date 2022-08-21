@@ -18,7 +18,7 @@ import lombok.Data;
 @ApiModel(description = "批量获取资源的路径参数请求")
 public class BatchGetResourceUrlRequest {
 
-    @ApiModelProperty(value = "资源ID列表", required = true, example = "1255046484550774785")
+    @ApiModelProperty(value = "资源ID列表", required = true, example = "[1255046484550774785]")
     @NotEmpty(message = "资源ID列表不能为空")
     private Set<Long> resourceIds;
 
