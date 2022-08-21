@@ -80,25 +80,25 @@ GeneratorServiceEntity.generateAllCode 会生dao层的相关代码
 
 ## 用例
 
-![用例图](./docs/usecase/用例图.png)
+![image-20220821134939464](/Users/catface/Library/Application%20Support/typora-user-images/image-20220821134939464.png)
 
 ## 系统边界
 
-![系统边界](./docs/component/component.png)
+![image-20220821134951018](https://tva1.sinaimg.cn/large/e6c9d24ely1h5ecb18gdvj20og0j23zk.jpg)
 
 ## 系统交互时序
 
 ### 前端异步上环文件
 
-![](./docs/sequence/前端异步上传文件.png)
+![image-20220821135010777](https://tva1.sinaimg.cn/large/e6c9d24ely1h5ecbaowhaj20uq0kiwfz.jpg)
 
 ### 服务端上传文件(常用于导出)
 
-![](./docs/sequence/服务端导出-前端下载.png)
+![image-20220821135024531](https://tva1.sinaimg.cn/large/e6c9d24ely1h5ecbjm3rej20wd0qdtb0.jpg)
 
 ## 数据库模型
 
-![数据库模型](./docs/entity/实体.png)
+![image-20220821135038684](https://tva1.sinaimg.cn/large/e6c9d24ely1h5ecbti842j210o0u0djs.jpg)
 
 ~~~mysql
 
