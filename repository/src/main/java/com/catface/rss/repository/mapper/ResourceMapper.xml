@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catface.rss.repository.mapper.ResourceMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, resource_type_id, bucket_name, resource_name, resource_path, size, status, access_status, upload_finish_time, anti_fraud_content, gmt_create, gmt_modified, creator, modifier, remark
+    </sql>
+
+</mapper>

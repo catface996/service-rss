@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.catface.rss.repository.mapper.UploadDownloadTaskMapper">
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, resource_id, task_type, upload_or_download, task_desc, status, error_resource_id, gmt_create, gmt_modified, creator, modifier, remark
+    </sql>
+
+    <select id="selectByResourceId" resultType="com.catface.rss.repository.entity.UploadDownloadTask">
+        select
+        <include refid="Base_Column_List"/>
+        from upload_download_task where resource_id = #{resourceId}
+    </select>
+
+    <select id="selectByTaskType" resultType="com.catface.rss.repository.entity.UploadDownloadTask">
+        select
+        <include refid="Base_Column_List"/>
+        from upload_download_task where task_type = #{taskType}
+        <if test="creators!=null and creators.size()>0">
+            and creator in
+            <foreach collection="creators" index="index" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+    </select>
+
+</mapper>
