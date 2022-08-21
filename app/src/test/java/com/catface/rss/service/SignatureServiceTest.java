@@ -27,7 +27,7 @@ public class SignatureServiceTest extends BaseTest {
     @Test
     public void testUpload() throws Exception {
         GetSignatureParam request = new GetSignatureParam();
-        request.setCreator("1212");
+        request.setCreator(121212L);
         Map<String, String> param = new HashMap<>();
         param.put("warehouseId", "3434343");
         request.setPathParam(param);
